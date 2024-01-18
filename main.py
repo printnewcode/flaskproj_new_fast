@@ -22,7 +22,8 @@ def randomizer(num_1, num_2) -> Union[str, int]:
 def timer():
     seconds = time.time()
     local_time = time.ctime(seconds)
-    return render_template('time.html', timeNow=local_time)
+    procent_time = (seconds%(24*60*60))/((24*60*60)/100)
+    return render_template('time.html', timeNow=local_time, procentTime=procent_time)
 
 
 @app.route('/user/<username>/<age>')

@@ -2,6 +2,11 @@
 {% block title %}Time{% endblock %}
 
 {% block content %}
-        <h1>Текущее время: {{ timeNow }}</h1>
+        <h1>Текущее время и дата: {{ timeNow }}</h1>
+        <section>
+            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="{{ procentTime }}" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: {{ procentTime }}%">{{ procentTime }} %</div>
+            </div>
+        </section>
 {% endblock %}
 
